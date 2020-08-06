@@ -8,7 +8,7 @@ workflows:
   deploy:
     jobs:
       - docker/publish:
-          image: anttiheimonen/testing
+          image: docker-part3-task2
           tag: 'latest'
           registry: registry.heroku.com
 
