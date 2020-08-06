@@ -5,17 +5,20 @@ orbs:
   docker: circleci/docker@1.0.0
 
 jobs:
-  buildaa:
+  check-and-build-only:
+    executor: docker/machine
     steps:
-      - docker/publish:
+      - checkout
+      - docker/check
+      - docker/build:
           image: docker-part3-task2/web
-          deploy: false
 
 
 workflows:
-  deploy:
+  build-docker-image-only:
     jobs:
-      - buildaa
+      - check-and-build-only
+
 
 
 
