@@ -9,13 +9,13 @@ workflows:
     jobs:
       - docker/publish:
           executor:
-              image: circleci/node
-              name: docker/docker
-              tag: boron-browsers
-            image: my/image
-            remote-docker-dlc: true
-            tag: my-tag
-            use-remote-docker: true
+            image: circleci/node
+            name: docker/docker
+            tag: boron-browsers
+          image: my/image
+          remote-docker-dlc: true
+          tag: my-tag
+          use-remote-docker: true
           # image: docker-part3-task2
           # name: docker/docker
           # tag: docker-part3-task2/web
