@@ -9,7 +9,6 @@ workflows:
     jobs:
       - docker/publish:
           image: docker-part3-task2
-          tag: 'latest'
           registry: registry.heroku.com
 
 
