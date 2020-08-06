@@ -6,7 +6,7 @@ orbs:
 
 jobs:
   buildaa:
-    setps:
+    steps:
       - docker/publish:
         image: docker-part3-task2/web
         deploy: false
