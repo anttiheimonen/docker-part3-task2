@@ -10,7 +10,8 @@ jobs:
     steps:
       - checkout
       - docker/check
-      - docker/build:
+      - docker/publish:
+          deploy: false
           image: docker-part3-task2/web
 
 
