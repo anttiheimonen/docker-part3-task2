@@ -8,8 +8,8 @@ jobs:
   buildaa:
     steps:
       - docker/publish:
-        image: docker-part3-task2/web
-        deploy: false
+          image: docker-part3-task2/web
+          deploy: false
 
 
 workflows:
