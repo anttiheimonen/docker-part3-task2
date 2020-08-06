@@ -7,10 +7,10 @@ orbs:
 workflows:
   deploy:
     jobs:
-      - heroku/install:
       - docker/publish:
           image: anttiheimonen/testing
           tag: 'latest'
+      - push-docker-image:
 
 
 # workflows:
