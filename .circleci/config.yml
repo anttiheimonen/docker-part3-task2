@@ -5,9 +5,9 @@ orbs:
   docker: circleci/docker@1.0.0
 
 workflows:
-  install:
   deploy:
     jobs:
+      - install:
       - docker/publish:
           image: anttiheimonen/testing
           tag: 'latest'
