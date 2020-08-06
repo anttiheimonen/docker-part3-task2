@@ -10,10 +10,8 @@ workflows:
       - docker/publish:
           image: anttiheimonen/testing
           tag: 'latest'
-      - push-docker-image:
+          registry: registry.heroku.com
 
 
-# workflows:
-#   heroku_deploy:
-#     jobs:
-#       - heroku/push-docker-image:
+
+
