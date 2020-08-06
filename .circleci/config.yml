@@ -8,7 +8,7 @@ workflows:
   deploy:
     jobs:
       - docker/publish:
-          image: docker-part3-task2
-          name: docker/docker
-          tag: registry.heroku.com/docker-part3-task2/web
+          image: docker-part3-task2/web
+          name: docker-part3-task2/web
+          # tag: registry.heroku.com/docker-part3-task2/web
           registry: registry.heroku.com
