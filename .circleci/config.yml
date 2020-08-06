@@ -2,8 +2,17 @@ version: 2.1
 
 orbs:
   heroku: circleci/heroku@1.2.0
+  docker: circleci/docker@1.0.0
 
 workflows:
-  heroku_deploy:
+  deploy:
     jobs:
-      - heroku/push-docker-image:
+      - docker/publish:
+          image: anttiheimonen/Testing
+          tag: 'latest'
+
+
+# workflows:
+#   heroku_deploy:
+#     jobs:
+#       - heroku/push-docker-image:
