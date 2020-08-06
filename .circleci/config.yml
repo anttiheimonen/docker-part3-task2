@@ -8,7 +8,7 @@ workflows:
   deploy:
     jobs:
       - docker/publish:
-          image: anttiheimonen/Testing
+          image: anttiheimonen/testing
           tag: 'latest'
 
 
