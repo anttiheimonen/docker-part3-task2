@@ -5,6 +5,7 @@ orbs:
   docker: circleci/docker@1.0.0
 
 workflows:
+  install:
   deploy:
     jobs:
       - docker/publish:
