@@ -5,15 +5,17 @@ orbs:
   docker: circleci/docker@1.0.0
 
 jobs:
+  build:
+    setps:
+      - docker/publish:
+        image: docker-part3-task2/web
+        deploy: false
 
 
 workflows:
   deploy:
     jobs:
-      - docker/publish:
-          image: docker-part3-task2/web
-          deploy: false
-
+      - build
 
 
 
