@@ -11,3 +11,7 @@ workflows:
       - docker/publish:
           image: docker-part3-task2/web
           deploy: false
+      - heroku/push-docker-image:
+          requires:
+            - docker/publish
+          app-name: docker-part3-task2
