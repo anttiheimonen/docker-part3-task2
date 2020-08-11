@@ -5,10 +5,6 @@ orbs:
   docker: circleci/docker@1.0.0
 
 workflows:
-  deploy:
+  heroku_deploy:
     jobs:
-      - docker/publish:
-          image: docker-part3-task2/web
-          name: docker-part3-task2/web
-          registry: registry.heroku.com
-
+      - push-docker-image:
